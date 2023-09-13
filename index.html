@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Danilov Nazar</title>
+  </head>
+  <body>
+    <div class="menu grey">
+      <nav class="menu__body">
+        <ul class="menu__list">
+          <div class="git cell">
+            <h1 class="title">Git</h1>
+            <li class="menu__item">
+              <p class="menu__link open" data-target="modal-git">Task 1</p>
+              <div class="modal-window modal-git">
+                <div class="window-content modal-css">
+                  <div class="wrapper">
+                    <img src="/assets/img/git.png" alt="" />
+                    <ul class="git__list">
+                      <li class="list__item">
+                        Підкючення репозиторія до мого пк, для цього в корні
+                        проекту виконати команду git init далі git remote add
+                        origin (посилання на репозиторій)
+                      </li>
+                      <li class="list__item">
+                        Імя, прізвище та пошта на репозиторії, команда
+                        <br /><code
+                          >$ git config --global user.name "First name Second
+                          name"</code
+                        ><br />
+                        <code
+                          >$ git config --global user.email
+                          example@example.com</code
+                        >
+                      </li>
+                      <li class="list__item">Створення нової гілки develop</li>
+                      <li class="list__item">
+                        Створення файлу .gitignore, і додання туди файлів які не
+                        мають попасти в репозиторій (dist, .env, .idea і тд)
+                      </li>
+                      <li class="list__item">
+                        Далі додаю всі файли в пре-коміт стан через git add .,
+                        перевіряємо чи все додалось через git status і створюємо
+                        новий коміт git commit -m "First commit"
+                      </li>
+                      <li class="list__item">
+                        Далі після перевірки чи всі файли які потрібно додались
+                        робимо пуш на репозиторій через git push -u origin
+                        develop і перевіряємо чи гілка і зміни з'явились на
+                        репозиторії
+                      </li>
+                      <li class="list__item">
+                        Створення локально нової гілки staging і пушу її на
+                        репозиторій git push -u origin staging (на гілці будуть
+                        перевіряти чи все працює, а вже потім заливати зміни на
+                        master, можна сказати що ця гілка це майбутня гілка
+                        master)
+                      </li>
+                      <li class="list__item">
+                        Далі створюю локально гілку master і також пушу її на
+                        репозиторій, згодом перевіряємо чи з'явилась staging і
+                        master в репозиторії
+                      </li>
+                      <li class="list__item">
+                        Далі також можна додати якщо його немає файл README.md і
+                        записати туда інформацію про проект
+                      </li>
+                      <li class="list__item">
+                        Також можна зробити захист від git push --force на гілку
+                        master і staging та дозволити на ці гілки тільки pull
+                        requests
+                      </li>
+                    </ul>
+                  </div>
+                  >
+                  <div class="btn-to-main"><a>To Main</a></div>
+                </div>
+              </div>
+            </li>
+          </div>
+          <div class="css cell">
+            <h1 class="title">CSS & HTML</h1>
+            <div class="css-list">
+              <li class="menu__item">
+                <p class="menu__link open" data-target="modal-css-1">Task 1</p>
+                <div class="modal-window modal-css-1">
+                  <div class="window-content modal-css">
+                    <div class="wrapper-flex grey">
+                      <header class="header center">Header</header>
+                      <div class="navigation center">Navigation</div>
+                      <main class="flex">
+                        <div class="content center">Content</div>
+                        <div class="sidebar center">Sidebar</div>
+                      </main>
+                      <footer class="footer center">Footer</footer>
+                    </div>
+                    >
+                    <div class="open-code open" data-target="modal-css-code-1">
+                      <a>Open code</a>
+                    </div>
+                    <div class="btn-to-main"><a>To Main</a></div>
+                  </div>
+                </div>
+                <div class="modal-window modal-css-code-1">
+                  <div class="window-content">
+                    <pre class="to-copy copy-css-code-1">
+.wrapper-flex {
+	flex-direction: column;
+	gap: 10px;
+	height: 100vh;
+	display: flex;
+	color: #fff;
+	width: 100%;
+	.header {
+		width: 100%;
+		background-color: #333;
+		height: 15.625rem;
+	}
+	.navigation {
+		width: 100%;
+		background-color: #333;
+		height: 9.375rem;
+	}
+	.content {
+		background-color: #333;
+		width: 70%;
+		height: 100%;
+	}
+	.sidebar {
+		width: 30%;
+		background-color: #333;
+		height: 100%;
+		align-self: self-end;
+	}
+	.footer {
+		background-color: #333;
+		height: 15.625rem;
+	}
+	.flex {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		gap: 10px;
+		justify-content: space-between;
+	}
+}
+</pre
+                    >
+                    <button class="copy open-code" data-copy="copy-css-code-2">
+                      Copy code
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__item">
+                <p class="menu__link open" data-target="modal-css-2">Task 2</p>
+                <div class="modal-window modal-css-2">
+                  <div class="window-content modal-css">
+                    <div class="wrapper-grid grey">
+                      <header class="header center">Header</header>
+                      <div class="navigation center">Navigation</div>
+                      <main class="grid">
+                        <div class="content center">Content</div>
+                        <div class="sidebar center">Sidebar</div>
+                      </main>
+                      <footer class="footer center">Footer</footer>
+                    </div>
+                    >
+                    <div class="open-code open" data-target="modal-css-code-2">
+                      <a>Open code</a>
+                    </div>
+                    <div class="btn-to-main"><a>To Main</a></div>
+                  </div>
+                </div>
+                <div class="modal-window modal-css-code-2">
+                  <div class="window-content">
+                    <pre class="to-copy copy-css-code-2">
+.wrapper-grid {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 100%;
+	grid-template-rows: 0.5fr 0.25fr 2fr 0.5fr;
+	color: #fff;
+	gap: 10px;
+}
+.grid {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: 3fr 1.25fr;
+}
+</pre
+                    >
+                    <button class="copy open-code" data-copy="copy-css-code-2">
+                      Copy code
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__item">
+                <p class="menu__link open" data-target="modal-css-3">Task 3</p>
+                <div class="modal-window modal-css-3">
+                  <div class="window-content modal-css">
+                    <div class="wrapper grey">
+                      <div class="centered">
+                        <div class="square"></div>
+                      </div>
+                    </div>
+                    >
+                    <div class="open-code open" data-target="modal-css-code-3">
+                      <a>Open code</a>
+                    </div>
+                    <div class="btn-to-main"><a>To Main</a></div>
+                  </div>
+                </div>
+                <div class="modal-window modal-css-code-3">
+                  <div class="window-content">
+                    <pre class="to-copy copy-css-code-3">
+.wrapper {
+	.centered {
+		position: absolute;
+		transform: translate(-50%, -50%);
+		top: 50%;
+		left: 50%;
+		.square {
+			width: 18.75rem;
+			height: 18.75rem;
+			animation: rotate 5s linear 0s infinite;
+			align-self: center;
+		}
+	}
+}
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+		background-color: red;
+	}
+	25% {
+		background-color: orange;
+	}
+	50% {
+		background-color: green;
+	}
+	75% {
+		background-color: orange;
+	}
+	100% {
+		transform: rotate(360deg);
+		background-color: red;
+	}
+}
+</pre
+                    >
+                    <button class="copy open-code" data-copy="copy-css-code-3">
+                      Copy code
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <div class="js cell">
+            <h1 class="title">Js Logic</h1>
+            <div class="js-list">
+              <li class="menu__item">
+                <p class="menu__link open" data-target="modal-1">Task 1</p>
+                <div class="modal-window modal-1">
+                  <div class="window-content">
+                    <pre class="to-copy copy-1">
+const obj1 = {
+	name: 'Test',
+	age: 19
+};
+							
+const obj2 = {
+	name: 'Test',
+	age: 19
+};
+							
+function haveSameData(obj1, obj2) {
+	//Функція вертає true якщо два об'єкта однакові, і false якщо ні
+	const obj1Length = Object.keys(obj1).length;
+	const obj2Length = Object.keys(obj2).length;
+	//Обчислюємо кількість ключей в обєктах
+							
+		if (obj1Length === obj2Length) {
+			//далі задопомогою методу every перевіряємо
+			//чи підходить кожен елемент масива під умову
+			return Object.keys(obj1).every(
+				key => obj2.hasOwnProperty(key)
+					&& obj2[key] === obj1[key]);
+		}
+		return false;
+}</pre
+                    >
+                    <button class="copy open-code" data-copy="copy-1">
+                      Copy code
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__item">
+                <p class="menu__link open" data-target="modal-2">Task 2</p>
+                <div class="modal-window modal-2">
+                  <div class="window-content">
+                    <pre class="to-copy copy-2">
+function* chunkArrayGenerator(array, size) {
+	//Повертає чанки з певного масиву за розміром
+	for (let i = 0; i < array.length; i += size) {
+		//Через цикл проходимо по масиву вираховуємо
+		//індекси кожного чанку і повертаємо зріз чанку
+		yield array.slice(i, i + size);
+	}
+}
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+const chunkGenerator = chunkArrayGenerator(arr, 3);
+console.log(chunkGenerator.next());
+console.log(chunkGenerator.next());
+console.log(chunkGenerator.next());
+console.log(chunkGenerator.next());</pre
+                    >
+                    <button class="copy open-code" data-copy="copy-2">
+                      Copy code
+                    </button>
+                  </div>
+                </div>
+              </li>
+
+              <li class="menu__item">
+                <a href="/assets/tasks/task-4.html" class="menu__link"
+                  >Task 3 ANIMATION</a
+                >
+              </li>
+              <li class="menu__item">
+                <p class="menu__link open" data-target="modal-4">Task 4</p>
+                <div class="modal-window modal-4">
+                  <div class="window-content">
+                    <pre class="to-copy copy-4">
+function arrayToObject(array) {
+	//Перетворює масив в об'єкт
+  const obj = {};
+  for (const [key, value] of Object.entries(array)) {
+	//Записуємо ключ та значення перетворенного масива
+	  if (key.length > 0) {
+		  if (Array.isArray(value)) {
+			//Рекурсивно викликаємо функцію та перетворюємо 
+			//вкладений масив в об'єкт, поки це масив
+			  obj[key] = arrayToObject(value); // Рекурсія
+		  } else {
+			//Якщо це не масив, записуємо значення в об'єкт
+			  obj[key] = value;
+		  }
+	  }
+  }
+  
+  return obj;
+  
+}
+let arro = [['name', 'developer'], ['age', 5], ['skills', [['html', 4], ['css', 5], ['js', 5]]]]
+console.log(arrayToObject(arro));
+</pre
+                    >
+                    <button class="copy open-code" data-copy="copy-4">
+                      Copy code
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__item">
+                <p class="menu__link open" data-target="modal-5">Task 5</p>
+                <div class="modal-window modal-5">
+                  <div class="window-content">
+                    <pre class="to-copy copy-5">
+function objectToArray(obj) {
+	//Перетворюємо об'єкт в масив
+  const arr = [];
+
+  for (const [key, value] of Object.entries(obj)) {
+	  if (typeof value === 'object' && !Array.isArray(value)) {
+		  //Рекурсивно викликаємо функцію для перетворення вкладених об'єктів в масив
+		  arr.push([key, objectToArray(value)]); // Рекурсія для вкладених об'єктів
+	  } else {
+		//Записуємо в масив значення та ключ
+		  arr.push([key, value]);
+	  }
+  }
+
+  return arr;
+}
+const object = {
+  name: 'developer',
+  age: 5,
+  skills: {
+	  html: 4,
+	  css: 5,
+	  js: 5
+  }
+}
+console.log(objectToArray(object));
+</pre
+                    >
+                    <button class="copy open-code" data-copy="copy-5">
+                      Copy code
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__item">
+                <a href="/assets/tasks/task-4.html" class="menu__link"
+                  >Task 6 ANIMATION</a
+                >
+              </li>
+              <li class="menu__item">
+                <p class="menu__link open" data-target="modal-7">Task 7</p>
+                <div class="modal-window modal-7">
+                  <div class="window-content">
+                    <pre class="to-copy copy-7">
+function separationObj(obj, parentKey = '') {
+	//Об'єкт перетворюємо в плоску карту
+	let result = {};
+
+	for (const key in obj) {
+		if (obj.hasOwnProperty(key)) {
+			//Створюємо ключ карти в залежності від батьківського ключа
+			const currentKey = parentKey ? `${parentKey}/${key}` : key;
+
+			if (obj[key] && typeof obj[key] === 'object' && !Array.isArray(obj[key])) {
+				//Рекурсивно викликаємо функцію і записуємо в result, поки значення ключа це об'єкт
+				Object.assign(result, separationObj(obj[key], currentKey));
+			} else {
+				//В згенерований шлях карти (ключ) записуємо значення цього шляху
+				result[currentKey] = obj[key];
+			}
+		}
+	}
+	return result;
+
+}
+const obj = {
+	a: {
+		b: {
+			c: 12,
+			d: 'Hello World'
+		},
+		e: [1, 2, 3]
+	}
+};
+
+console.log(separationObj(obj));
+</pre
+                    >
+                    <button class="copy open-code" data-copy="copy-7">
+                      Copy code
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__item">
+                <p class="menu__link open" data-target="modal-8">Task 8</p>
+                <div class="modal-window modal-8">
+                  <div class="window-content">
+                    <pre class="to-copy copy-8">
+function combos(num) {
+	//Створюємо комбінації чисел для досягнення певної суми
+	const results = [];
+  
+	function generate(targetSum, currentCombo, startNum) {
+	  if (targetSum === 0) {
+		//Добавляємо результат першої згенерованої суми
+		 results.push([...currentCombo]);
+		 return;
+	  }
+  
+	  for (let i = startNum; i <= num; i++) {
+		 if (targetSum - i >= 0) {
+			//Додаємо значення поки поточна комбінація не досягне суми
+			currentCombo.push(i);
+			generate(targetSum - i, currentCombo, i);
+			currentCombo.pop();
+		 } else {
+			//Закінчимо генерацію першої суми
+			break;
+		 }
+	  }
+	}
+  
+	generate(num, [], 1);
+  
+	return results;
+ }
+  
+ console.log(combos(10));
+</pre
+                    >
+                    <button class="copy open-code" data-copy="copy-8">
+                      Copy code
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__item">
+                <p class="menu__link open" data-target="modal-9">Task 9</p>
+                <div class="modal-window modal-9">
+                  <div class="window-content">
+                    <pre class="to-copy copy-9">
+ function add(x) {
+	//Сумує нескінченну кількість аргументів
+	const sum = (y) => add(x + y);
+	sum.valueOf = () => x;
+	//Повертаємо стрілочну функцію яка рекурсивно сумує числа
+	return sum;
+ }
+ 
+ //При виклиці Number(add(1)(2)(5)(-3)),
+ //рекурсивно рахується сума всіх чисел і повертається число (сума)
+ Number.prototype.add = function (x) {
+	return add(this + x);
+ };
+ 
+ console.log(Number(add(1)(2)(5)(-3)));
+</pre
+                    >
+                    <button class="copy open-code" data-copy="copy-9">
+                      Copy code
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+        </ul>
+      </nav>
+    </div>
+    <script src="/assets/main.js"></script>
+  </body>
+</html>
