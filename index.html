@@ -330,9 +330,46 @@ console.log(chunkGenerator.next());</pre
               </li>
 
               <li class="menu__item">
-                <a href="/assets/tasks/task-4.html" class="menu__link"
-                  >Task 3 ANIMATION</a
-                >
+					<p class="menu__link open" data-target="modal-3">Task 3</p>
+					<div class="modal-window modal-3">
+					  <div class="window-content">
+						 <pre class="to-copy copy-3">
+function bulkRun(data) {
+	let cbs = data.map(([f, arguments]) => {
+	  return new Promise((resolve) => {
+		f(...arguments, (result) => {
+			resolve(result);
+		 });
+	  });
+	});
+ 
+	return Promise.all(cbs);
+ }
+ 
+ const f1 = (cb) => {
+	cb(1);
+ };
+ 
+ const f2 = (a, cb) => {
+	cb(a);
+ };
+ 
+ const f3 = (a, b, cb) => {
+	setTimeout(() => cb([a, b]), 1000);
+ };
+ 
+ bulkRun([
+	[f1, []],
+	[f2, [2]],
+	[f3, [3, 4]],
+ ]).then(console.log);
+</pre
+						 >
+						 <button class="copy open-code" data-copy="copy-3">
+							Copy code
+						 </button>
+					  </div>
+					</div>
               </li>
               <li class="menu__item">
                 <p class="menu__link open" data-target="modal-4">Task 4</p>
@@ -409,9 +446,47 @@ console.log(objectToArray(object));
                 </div>
               </li>
               <li class="menu__item">
-                <a href="/assets/tasks/task-4.html" class="menu__link"
-                  >Task 6 ANIMATION</a
-                >
+					<p class="menu__link open" data-target="modal-6">Task 6</p>
+					<div class="modal-window modal-6">
+					  <div class="window-content">
+						 <pre class="to-copy copy-6">
+function NotificationException() { }
+function ErrorException() { }
+function primitiveMultiply(a, b) {
+	const rand = Math.random();
+	if (rand < 0.5) {
+		return a * b;
+	} else if (rand > 0.85) {
+		throw new ErrorException()
+	} else {
+		throw new NotificationException()
+	}
+}
+
+function reliableMultiply(a, b) {
+	try {
+		return primitiveMultiply(a, b)
+	}
+	catch (e) {
+		if (e instanceof NotificationException) {
+			//Через instanceof перевіряємо чи є об'єкт (e)
+			//екземпляром функції (NotificationException) -> пробуємо знову отримати число
+			return reliableMultiply(a, b)
+		} else if (e instanceof ErrorException) {
+			//Через instanceof перевіряємо чи є об'єкт (e)
+			// екземпляром функції (ErrorException) -> завершуємо роботу
+			return
+		}
+	}
+}
+
+</pre
+						 >
+						 <button class="copy open-code" data-copy="copy-6">
+							Copy code
+						 </button>
+					  </div>
+					</div>
               </li>
               <li class="menu__item">
                 <p class="menu__link open" data-target="modal-7">Task 7</p>

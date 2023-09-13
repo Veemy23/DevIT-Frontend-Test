@@ -246,28 +246,86 @@ copyButton.forEach(btn => {
 // console.log(separationObj(obj));
 
 
-function combos(num) {
-	const results = [];
-  
-	function generate(targetSum, currentCombo, startNum) {
-	  if (targetSum === 0) {
-		 results.push([...currentCombo]);
-		 return;
-	  }
-  
-	  for (let i = startNum; i <= num; i++) {
-		 if (targetSum - i >= 0) {
-			currentCombo.push(i);
-			generate(targetSum - i, currentCombo, i);
-			currentCombo.pop();
-		 } else {
-			break;
-		 }
-	  }
-	}
-  
-	generate(num, [], 1);
-	return results;
- }
+// function combos(num) {
+// 	const results = [];
 
- console.log(combos(10));
+// 	function generate(targetSum, currentCombo, startNum) {
+// 	  if (targetSum === 0) {
+// 		 results.push([...currentCombo]);
+// 		 return;
+// 	  }
+
+// 	  for (let i = startNum; i <= num; i++) {
+// 		 if (targetSum - i >= 0) {
+// 			currentCombo.push(i);
+// 			generate(targetSum - i, currentCombo, i);
+// 			currentCombo.pop();
+// 		 } else {
+// 			break;
+// 		 }
+// 	  }
+// 	}
+
+// 	generate(num, [], 1);
+// 	return results;
+//  }
+
+//  console.log(combos(10));
+
+// function bulkRun(data) {
+// 	let cbs = data.map(([f, arguments]) => {
+// 	  return new Promise((resolve) => {
+// 		f(...arguments, (result) => {
+// 			resolve(result);
+// 		 });
+// 	  });
+// 	});
+
+// 	return Promise.all(cbs);
+//  }
+
+//  const f1 = (cb) => {
+// 	cb(1);
+//  };
+
+//  const f2 = (a, cb) => {
+// 	cb(a);
+//  };
+
+//  const f3 = (a, b, cb) => {
+// 	setTimeout(() => cb([a, b]), 1000);
+//  };
+
+//  bulkRun([
+// 	[f1, []],
+// 	[f2, [2]],
+// 	[f3, [3, 4]],
+//  ]).then(console.log);
+
+// function NotificationException() { }
+// function ErrorException() { }
+// function primitiveMultiply(a, b) {
+// 	const rand = Math.random();
+// 	if (rand < 0.5) {
+// 		return a * b;
+// 	} else if (rand > 0.85) {
+// 		throw new ErrorException()
+// 	} else {
+// 		throw new NotificationException()
+// 	}
+// }
+
+// function reliableMultiply(a, b) {
+// 	try {
+// 		return primitiveMultiply(a, b)
+// 	}
+// 	catch (e) {
+// 		if (e instanceof NotificationException) {
+// 			return reliableMultiply(a, b)
+// 		} else if (e instanceof ErrorException) {
+// 			return
+// 		}
+// 	}
+// }
+
+// console.log(reliableMultiply(8, 8));
